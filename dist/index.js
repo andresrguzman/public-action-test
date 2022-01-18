@@ -6518,7 +6518,7 @@ function run() {
                 iss,
             };
             const jwt_token = jwt.sign(payload, private_key, { algorithm: "RS256" });
-            core.setOutput("jwt-token", jwt_token);
+            core.setOutput("token", jwt_token);
         }
         catch (error) {
             core.setFailed(error.message);
